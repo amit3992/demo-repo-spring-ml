@@ -3,10 +3,11 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - before: |
+  - name: spring-app-build
+    before: |
       pwd
       cd player-service
-  - init: mvn package -DskipTests
+    init: mvn package -DskipTests
 
 ports:
   - port: 8080  # Port for Spring Boot
