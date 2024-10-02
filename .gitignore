@@ -1,0 +1,101 @@
+# Common directories
+target/
+build/
+bin/
+out/
+
+# Maven/Gradle specific files
+.mvn/
+.gradle/
+wrapper/
+
+# Compiled bytecode
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Spring Boot specific files
+.spring/
+nohup.out
+
+# Python specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.eggs/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE-specific settings
+
+## IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+## VS Code
+.vscode/
+*.code-workspace
+
+## Eclipse
+.project
+.classpath
+.settings/
+
+## PyCharm
+.idea/
+*.idea/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/*.iml
+.idea/vcs.xml
+.idea/dictionaries
+.idea/shelf
+.idea/libraries
+.idea/codeStyles/
+.idea/runConfigurations/
+.idea/assetwizard/
+.idea/assetsync/
+
+
+# Logs and runtime data
+*.log
+*.pid
+
+# Package managers
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+pip-log.txt
+pip-delete-this-directory.txt
+yarn-debug.log
+.yarn-integrity
+package-lock.json
+
+
+# JetBrains IDEs
+.idea/

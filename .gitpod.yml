@@ -1,0 +1,15 @@
+tasks:
+  - init: |
+      # Install dependencies for Java and Python
+      sudo apt-get update
+      sudo apt-get install -y openjdk-17-jdk python3-pip
+      pip3 install -r player-ml-model/requirements.txt  # Install Python dependencies
+  - name: player-service-app
+    command: |
+      cd player-service
+      ./mvnw clean install
+      ./mvnw spring-boot:run
+  - name: player-ml-model
+    command: |
+      cd player-ml-model
+      python3 model.py
