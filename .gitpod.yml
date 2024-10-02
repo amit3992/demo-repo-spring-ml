@@ -7,9 +7,19 @@ tasks:
   - name: player-service-app
     command: |
       cd player-service
-      ./mvnw clean install
-      ./mvnw spring-boot:run
+      ./mvnw package -DskipTests
   - name: player-ml-model
     command: |
       cd player-ml-model
       python3 model.py
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - redhat.java
+    - vscjava.vscode-java-debug
+    - vscjava.vscode-java-test
+    - pivotal.vscode-spring-boot
