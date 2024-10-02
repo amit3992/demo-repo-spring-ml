@@ -3,7 +3,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: ./mvnw package -DskipTests
+  - before: |
+      cd ../player-service
+  - init: mvn package -DskipTests
 
 ports:
   - port: 8080  # Port for Spring Boot
