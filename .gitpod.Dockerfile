@@ -2,21 +2,11 @@
 FROM gitpod/workspace-full:latest
 
 # Install Java (JDK) for Spring Boot
-RUN sudo apt-get update && \
-    sudo apt-get install -y openjdk-17-jdk
+USER gitpod
 
-# Install Maven (if you're using Maven for Spring Boot)
-RUN sudo apt-get install -y maven
-
-# Set JAVA_HOME environment variable (important for running Java apps)
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-
-# Install Python 3 and pip (if not already installed)
-RUN sudo apt-get install -y python3 python3-pip
-
-# Install Python packages globally if needed
-COPY ./player-ml-model/requirements.txt /workspace/player-ml-model/requirements.txt
-RUN pip3 install -r /workspace/player-ml-model/requirements.txt
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
+    sdk install java 17.0.3-ms && \
+    sdk default java 17.0.3-ms"
 
 # Expose the ports for both applications
 EXPOSE 8080
